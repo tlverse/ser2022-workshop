@@ -646,16 +646,16 @@ nuisance parameters:</p>
 <span id="cb175-9"><a href="causal-mediation-analysis.html#cb175-9"></a>washb_NDE</span>
 <span id="cb175-10"><a href="causal-mediation-analysis.html#cb175-10"></a>A tmle3_Fit that took <span class="dv">1</span> <span class="kw">step</span>(s)</span>
 <span id="cb175-11"><a href="causal-mediation-analysis.html#cb175-11"></a>   type                  param init_est tmle_est       se    lower   upper</span>
-<span id="cb175-12"><a href="causal-mediation-analysis.html#cb175-12"></a><span class="dv">1</span><span class="op">:</span><span class="st">  </span>NDE NDE[Y_{A=<span class="dv">1</span>} <span class="op">-</span><span class="st"> </span>Y_{A=<span class="dv">0</span>}] <span class="fl">0.015155</span> <span class="fl">0.015155</span> <span class="fl">0.085676</span> <span class="fl">-0.15277</span> <span class="fl">0.18308</span></span>
+<span id="cb175-12"><a href="causal-mediation-analysis.html#cb175-12"></a><span class="dv">1</span><span class="op">:</span><span class="st">  </span>NDE NDE[Y_{A=<span class="dv">1</span>} <span class="op">-</span><span class="st"> </span>Y_{A=<span class="dv">0</span>}] <span class="fl">0.013778</span> <span class="fl">0.013778</span> <span class="fl">0.085633</span> <span class="fl">-0.15406</span> <span class="fl">0.18162</span></span>
 <span id="cb175-13"><a href="causal-mediation-analysis.html#cb175-13"></a>   psi_transformed lower_transformed upper_transformed</span>
-<span id="cb175-14"><a href="causal-mediation-analysis.html#cb175-14"></a><span class="dv">1</span><span class="op">:</span><span class="st">        </span><span class="fl">0.015155</span>          <span class="fl">-0.15277</span>           <span class="fl">0.18308</span></span></code></pre></div>
+<span id="cb175-14"><a href="causal-mediation-analysis.html#cb175-14"></a><span class="dv">1</span><span class="op">:</span><span class="st">        </span><span class="fl">0.013778</span>          <span class="fl">-0.15406</span>           <span class="fl">0.18162</span></span></code></pre></div>
 <p>From this, we can draw the conclusion that the direct effect of the treatment
 (through all paths not involving the mediators (sex, month, aged)) is
-0.01515. Note that, together, the estimates of
+0.01378. Note that, together, the estimates of
 the natural direct and indirect effects approximately recover the <em>average
 treatment effect</em>, that is, based on these estimates of the NDE and NIE, the
 ATE is roughly
-0.01853.</p>
+0.01715.</p>
 </div>
 <div id="targeted-estimation-of-the-population-intervention-direct-effect" class="section level3">
 <h3>
