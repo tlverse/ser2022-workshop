@@ -1,7 +1,7 @@
-Package: tlverseworkshops
-Title: Targeted Learning Workshops
+Package: ser2022-workshop
+Title: SER 2022 Workshop
 Version: 1.0.0
-Depends: R (>= 4.0.0)
+Depends: R (>= 4.2.0)
 Imports:
   bookdown,
   bslib,
@@ -52,6 +52,6 @@ Remotes:
   tlverse/tmle3shift@master,
   tlverse/tmle3mediate@master
 URL:
-  https://github.com/tlverse/tlverse-workshops,
-  https://tlverse.org/tlverse-workshops
+  https://github.com/tlverse/ser2022-workshop,
+  https://tlverse.org/ser2022-workshop
 BugReports: https://github.com/tlverse/tlverse-workshops/issues
