@@ -1,7 +1,7 @@
 ---
 knit: "bookdown::render_book"
-title: "[Workshop] Targeted Learning in the `tlverse`"
-subtitle: "Causal Inference Meets Machine Learning"
+title: "[SER 2022 Workshops] Targeted Learning I and II"
+subtitle: "Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference"
 author: "Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana
   Malenica, Rachael Phillips"
 date: "updated: June 08, 2022"
@@ -16,25 +16,25 @@ colorlinks: yes
 lot: yes
 lof: yes
 always_allow_html: yes
-url: 'https\://tlverse.org/tlverse-workshops/'
-github-repo: tlverse/tlverse-workshops
+url: 'https\://tlverse.org/ser2022-workshop/'
+github-repo: tlverse/ser2022-workshop
 graphics: yes
-description: "Open source, reproducible teaching materials accompanying a
-  workshop or short course on Targeted Learning with the [`tlverse` software
-  ecosystem](https://github.com/tlverse)."
+description: "Open source, reproducible teaching materials accompanying two 
+  half-day workshops on Targeted Learning with the 
+  [`tlverse`](https://github.com/tlverse)."
 ---
 
 # Welcome! {-}
 
-This open source, reproducible vignette is for a half-day workshop on the
-Targeted Learning framework for statistical and causal inference with machine
-learning.  Beyond introducing Targeted Learning, the workshop focuses on
-applying the methodology in practice using the [`tlverse` software
-ecosystem](https://github.com/tlverse).  These materials are based on a working
-draft of the book [*Targeted Learning in `R`: Causal Data Science with the
-`tlverse` Software Ecosystem*](https://tlverse.org/tlverse-handbook/), which
-includes in-depth discussion of these topics and much more, and may serve as a
-useful reference to accompany these workshop materials.
+This open source, reproducible vignette is for two half-day workshops at the 
+Society for Epidemiologic Research Meeting on June 14, 2022. Beyond introducing 
+Targeted Learning (TL), these workshops focus on applying the methodology in 
+practice using the [`tlverse` software ecosystem](https://github.com/tlverse). 
+These materials are based on a working draft of the book [*Targeted 
+Learning in `R`: Causal Data Science with the `tlverse` Software 
+Ecosystem*](https://tlverse.org/tlverse-handbook/), which includes in-depth 
+discussion of these topics and much more, and may serve as a useful reference 
+to accompany these workshop materials.
 
 <img style="float: center; margin-right: 1%; margin-bottom: 0.01em"
      src="img/logos/tlverse-logo.svg" width="30%" height="30%">
@@ -47,73 +47,83 @@ useful reference to accompany these workshop materials.
 
 ## Important links {-}
 
-* __Load R environment__: Please set up the `R` virtual environment using the
-  [instructions](https://github.com/tlverse/tlverse-workshops/blob/master/install.md).
-  If you experiencing issues with the `R` environment, you may install the 
-  relevant software packages before the workshop using the [installation
-  script](https://github.com/tlverse/tlverse-workshops/blob/master/install.R).
+* **Load R environment**: Please try to set up the `R` virtual environment 
+  before the day of the workshop by following these 
+  [instructions](https://github.com/tlverse/ser2022-workshop/blob/master/install.md).
+  If you experiencing issues with the virtual environment, you may instead 
+  install the relevant software packages using this [install `R` 
+  script](https://github.com/tlverse/ser2022-workshop/blob/master/install.R).
 
 * You will probably exceed the GitHub API rate limit during this installation,
-  which will throw an error. This issue and the solution are addressed
-  [here](#installtlverse).
+  which will throw an error. This issue and a solution are addressed
+  [here](https://tlverse.org/ser2022-workshop/tlverse.html#installtlverse).
 
 * __Code__: `R` script files for each section of the workshop are available via
   the GitHub repository for the workshop at
-  https://github.com/tlverse/tlverse-workshops/tree/master/R_code
+  https://github.com/tlverse/ser2022-workshops/tree/master/R_code
 
-## About this workshop {-}
+## About {-}
 
-This workshop will provide a comprehensive introduction to the field of
-_Targeted Learning (TL)_ for statistical and causal inference, and the 
-corresponding [`tlverse` software ecosystem](https://github.com/tlverse). 
-Emphasis will be placed on super learning (SL) and targeted minimum loss-based 
-estimation (TMLE) for causal effects of single time point interventions. TMLE 
-represents a finite-sample robust, efficient substitution estimation strategy 
-that uses super (ensemble machine) learning to flexibly adjust for confounding 
-while yielding valid statistical inference. We will discuss TMLE for the causal 
-effects of static and dynamic interventions; time permitting, additional topics 
-to be discussed will include estimation of the causal effects of optimal dynamic 
-and stochastic interventions.
+### Targeted Learning I: Causal Inference Meets Machine Learning (8:30A--12:00P) {-}
+This workshop will provide an introduction to the field of targeted learning for 
+causal inference, and the corresponding [`tlverse` software 
+ecosystem](https://github.com/tlverse). Emphasis will be placed on targeted 
+minimum loss-based estimation (TMLE) of causal effects under single time point 
+interventions, including extensions for missing covariates and outcomes. These 
+multiply robust, efficient plug-in estimators use state-of-the-art machine 
+learning tools to flexibly adjust for confounding while yielding valid 
+statistical inference. In addition to discussion, this workshop will incorporate 
+both interactive activities and hands-on, guided `R` programming exercises, to 
+allow participants the opportunity to familiarize themselves with methodology 
+and tools that translate to real-world data analysis. It is highly recommended 
+for participants to have an understanding of basic statistical concepts such as 
+confounding, probability distributions, confidence intervals, hypothesis 
+testing, and regression. Advanced knowledge of mathematical statistics is 
+useful but not necessary. Familiarity with the `R` programming language will be 
+essential.
 
-In addition to discussion, this workshop will incorporate both interactive
-activities and hands-on, guided `R` programming exercises, to allow participants
-the opportunity to familiarize themselves with methodology and tools that will
-translate to real-world data analysis. It is highly recommended for participants
-to have an understanding of basic statistical concepts such as confounding,
-probability distributions, confidence intervals, hypothesis testing, and
-regression. Advanced knowledge of mathematical statistics is useful but not
-necessary. Familiarity with the `R` programming language will be essential.
+### Targeted Learning II: Advanced Applications of Causal Inference (1:00--4:00P) {-}
+Building on an introduction to targeted learning and its software ecosystem, 
+the [`tlverse`](https://github.com/tlverse), this workshop serves as a 
+walkthrough of its use for estimation of advanced parameters motivated by 
+causal inference. In particular, we will discuss targeted estimators of the 
+causal effects of dynamic, optimal dynamic, and stochastic interventions; time 
+permitting, estimation of the effects of interventions in settings with 
+time-to-event (survival) outcomes may also be discussed. Throughout, we will 
+draw on advanced uses of machine learning, including conditional density 
+estimation and categorical outcome prediction, highlighting the extensibility 
+of the `tlverse`. In addition to discussion, this workshop will incorporate both 
+interactive activities and hands-on, guided `R` programming exercises, to allow 
+participants the opportunity to familiarize themselves with methodology and 
+tools that translate to real-world data analysis. It is highly recommended for 
+participants to have an understanding of basic statistical concepts such as 
+confounding, probability distributions, confidence intervals, hypothesis 
+testing, and regression. Advanced knowledge of mathematical statistics is 
+useful but not necessary. Familiarity with the `R` programming language will be 
+essential. Prior experience with the `tlverse` (as covered in the SER workshop 
+"Targeted Learning I") is highly recommended.
 
-## Outline {-}
+## Schedule {-}
 
-* _Warm-up_: The Roadmap of Targeted Learning and [Why We Need A Statistical
-  Revolution](https://senseaboutscienceusa.org/super-learning-and-the-revolution-in-knowledge/)
-  with an *[introductory video lecture by Mark van der Laan and Alan
-  Hubbard](https://www.dropbox.com/s/7b6ru2ahycqq80v/ENAR2021-lecture.mp4?dl=0)*
-  (__Please watch this hour-long lecture before the workshop.__)
-* 09:00-09:30A: [Introduction to the `tlverse` Software
-  Ecosystem](https://tlverse.org) and the [WASH Benefits
-  data](http://www.washbenefits.net/)
-* 09:30-10:00A: Super learning with the [`sl3` `R`
-  package](https://github.com/tlverse/sl3)
-* 10:00-11:00A: Programming exercises with `sl3`
-* 11:00-11:15A: Morning Coffee Break and Q&A
-* 11:15-12:00P: Targeted Learning for causal inference with the [`tmle3` `R`
-  package](https://github.com/tlverse/tmle3)
-* 12:00-12:45P: Programming exercises with `tmle3`
-* 12:45-01:30P: Lunch Break
-* 01:30-02:15P: Optimal treatment regimes with the [`tmle3mopttx` `R`
-  package](https://github.com/tlverse/tmle3mopttx)
-* 02:15-03:00P: Programming exercises with `tmle3mopttx`
-* 03:00-03:15P: Afternoon Coffee Break
-* 03:15-04:00P: Stochastic treatment regimes with the [`tmle3shift` `R`
-  package](https://github.com/tlverse/tmle3shift)
-* 04:00-04:30P: Programming exercises with `tmle3shift`
-* 04:30-05:00P: Concluding remarks and discussion
+* 08:30--9:40A: Introduction to Targeted Learning by Alan (slide deck 
+  here: https://github.com/tlverse/ser2022-workshop/tree/master/slides/intro.pdf. 
+* 09:40--10:00A: Introduction to the [`tlverse`](#tlverse) and [`R6`](#r6) by 
+  Jeremy
+* 10:00--10:40A: Super learning in the `tlverse` with the [`sl3` `R`
+  package](https://github.com/tlverse/sl3) by Rachael
+* 10:40--11:00A: Programming exercises with `sl3`
+* 11:00--11:40A: Targeted minimum loss-based estimation in the `tlverse` with 
+  the [`tmle3` `R` package](https://github.com/tlverse/tmle3) by Jeremy
+* 11:40A--12:00P: Programming exercises with `tmle3`
+* 12:00--01:00P: Lunch Break
+* 01:00--02:00P: Optimal treatment regimes with the [`tmle3mopttx` `R`
+  package](https://github.com/tlverse/tmle3mopttx) by Ivana
+* 02:00-02:30P: Programming exercises with `tmle3mopttx`
+* 02:30-03:30P: Stochastic treatment regimes with the [`tmle3shift` `R`
+  package](https://github.com/tlverse/tmle3shift) by Nima
+* 03:30-04:00P: Programming exercises with `tmle3shift`
 
-<!--
-__NOTE: All listings are in Pacific Time.__
--->
+NOTE: All listings are in Central Time.
 
 ## About the instructors {-}
 
