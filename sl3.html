@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 Super Learning with sl3 | [SER 2022 Workshops] Targeted Learning I and II</title>
 <meta name="author" content="Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips">
-<meta name="description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-08 Learning Objectives By the end of this chapter...">
+<meta name="description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-13 Learning Objectives By the end of this chapter...">
 <meta name="generator" content="bookdown 0.26.3 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Super Learning with sl3 | [SER 2022 Workshops] Targeted Learning I and II">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://tlverse.org/ser2022-workshop/sl3.html">
-<meta property="og:description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-08 Learning Objectives By the end of this chapter...">
+<meta property="og:description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-13 Learning Objectives By the end of this chapter...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 Super Learning with sl3 | [SER 2022 Workshops] Targeted Learning I and II">
-<meta name="twitter:description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-08 Learning Objectives By the end of this chapter...">
+<meta name="twitter:description" content="Rachael Phillips Based on the sl3 R package by Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin. Updated: 2022-06-13 Learning Objectives By the end of this chapter...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -65,8 +65,8 @@
 <li><a class="active" href="sl3.html"><span class="header-section-number">3</span> Super Learning with sl3</a></li>
 <li><a class="" href="tmle3.html"><span class="header-section-number">4</span> The TMLE Framework</a></li>
 <li><a class="" href="optimal-individualized-treatment-regimes.html"><span class="header-section-number">5</span> Optimal Individualized Treatment Regimes</a></li>
-<li><a class="" href="stochastic-treatment-regimes-optional.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes (optional)</a></li>
-<li><a class="" href="causal-mediation-analysis.html"><span class="header-section-number">7</span> Causal Mediation Analysis</a></li>
+<li><a class="" href="stochastic-treatment-regimes.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes</a></li>
+<li><a class="" href="causal-mediation-analysis-optional.html"><span class="header-section-number">7</span> Causal Mediation Analysis (optional)</a></li>
 <li><a class="" href="r6.html"><span class="header-section-number">8</span> A Primer on the R6 Class System</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
@@ -83,7 +83,7 @@
 <p><em>Rachael Phillips</em></p>
 <p>Based on the <a href="https://github.com/tlverse/sl3"><code>sl3</code> <code>R</code> package</a> by <em>Jeremy
 Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips, and Oleg Sofrygin</em>.</p>
-<p>Updated: 2022-06-08</p>
+<p>Updated: 2022-06-13</p>
 <div id="learning-objectives-2" class="section level3 unnumbered">
 <h3>Learning Objectives<a class="anchor" aria-label="anchor" href="#learning-objectives-2"><i class="fas fa-link"></i></a>
 </h3>
@@ -1034,8 +1034,8 @@ so the results are reproducible, and we will also time it.</p>
 <span id="cb17-6"><a href="sl3.html#cb17-6"></a>runtime_sl_fit &lt;-<span class="st"> </span><span class="kw">proc.time</span>() <span class="op">-</span><span class="st"> </span>start_time <span class="co"># end time - start time = run time</span></span>
 <span id="cb17-7"><a href="sl3.html#cb17-7"></a>runtime_sl_fit</span>
 <span id="cb17-8"><a href="sl3.html#cb17-8"></a>   user  system elapsed </span>
-<span id="cb17-9"><a href="sl3.html#cb17-9"></a><span class="fl">273.555</span>   <span class="fl">1.688</span> <span class="fl">274.819</span> </span></code></pre></div>
-<p>It took 274.8 seconds
+<span id="cb17-9"><a href="sl3.html#cb17-9"></a><span class="fl">273.554</span>   <span class="fl">1.256</span> <span class="fl">274.705</span> </span></code></pre></div>
+<p>It took 274.7 seconds
 (4.6 minutes) to fit the SL.</p>
 <div id="summary" class="section level4 unnumbered">
 <h4>Summary<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
@@ -3051,7 +3051,7 @@ below.</p>
 <span id="cb52-15"><a href="sl3.html#cb52-15"></a>runtime_sl_fit_parallel &lt;-<span class="st"> </span><span class="kw">proc.time</span>() <span class="op">-</span><span class="st"> </span>start_time</span>
 <span id="cb52-16"><a href="sl3.html#cb52-16"></a>runtime_sl_fit_parallel</span>
 <span id="cb52-17"><a href="sl3.html#cb52-17"></a>   user  system elapsed </span>
-<span id="cb52-18"><a href="sl3.html#cb52-18"></a><span class="fl">269.066</span>   <span class="fl">1.466</span> <span class="fl">269.994</span> </span></code></pre></div>
+<span id="cb52-18"><a href="sl3.html#cb52-18"></a><span class="fl">270.896</span>   <span class="fl">1.233</span> <span class="fl">271.921</span> </span></code></pre></div>
 </div>
 <div id="default-data-pre-processing" class="section level3">
 <h3>
@@ -5933,7 +5933,7 @@ Infarction with <code>sl3</code></a>.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>[SER 2022 Workshops] Targeted Learning I and II</strong>: Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference" was written by Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips. It was last built on updated: June 08, 2022.</p>
+    <p>"<strong>[SER 2022 Workshops] Targeted Learning I and II</strong>: Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference" was written by Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips. It was last built on updated: June 13, 2022.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -4,7 +4,7 @@ title: "[SER 2022 Workshops] Targeted Learning I and II"
 subtitle: "Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference"
 author: "Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana
   Malenica, Rachael Phillips"
-date: "updated: June 08, 2022"
+date: "updated: June 13, 2022"
 documentclass: book
 site: bookdown::bookdown_site
 bibliography: [book.bib, packages.bib]
@@ -47,21 +47,29 @@ to accompany these workshop materials.
 
 ## Important links {-}
 
-* **Load R environment**: Please try to set up the `R` virtual environment 
+* **`R` version 4.2.0+**: Install `R` or update to the most recent major version 
+  of `R` (which is 4.2.0+): https://cloud.r-project.org. For more operating 
+  system-specific instructions, please see the [setup 
+  instructions](https://tlverse.org/ser2022-workshop/tlverse.html#setup) below.
+* **`R` packages**: Please try to set up the `R` virtual environment 
   before the day of the workshop by following these 
   [instructions](https://github.com/tlverse/ser2022-workshop/blob/master/install.md).
-  If you experiencing issues with the virtual environment, you may instead 
-  install the relevant software packages using this [install `R` 
+  If you are experiencing issues or if this is your first time using `renv`, 
+  this introduction to the package might be 
+  helpful: https://rstudio.github.io/renv/articles/renv.html. As an alternative
+  to the virtual environment, you can install the relevant software packages 
+  instead using this [install `R` 
   script](https://github.com/tlverse/ser2022-workshop/blob/master/install.R).
-
-* You will probably exceed the GitHub API rate limit during this installation,
-  which will throw an error. This issue and a solution are addressed
-  [here](https://tlverse.org/ser2022-workshop/tlverse.html#installtlverse).
-
-* __Code__: `R` script files for each section of the workshop are available via
-  the GitHub repository for the workshop at
-  https://github.com/tlverse/ser2022-workshops/tree/master/R_code
-
+* __Installation errors__: You will probably exceed the GitHub API rate limit 
+  during the installation, which will throw an error. This issue and a solution 
+  are addressed 
+  here: https://tlverse.org/ser2022-workshop/tlverse.html#installtlverse. 
+* __Code__: `R` script files for each section of the workshop are available in
+  the "R_code" folder in the GitHub repository for the workshop:
+  https://github.com/tlverse/ser2022-workshops/tree/master/R_code. 
+* __Slides__: Any slide decks are available in the "slides" folder in the 
+  GitHub repository for the workshop: 
+  https://github.com/tlverse/ser2022-workshops/tree/master/slides.
 ## About {-}
 
 ### Targeted Learning I: Causal Inference Meets Machine Learning (8:30A--12:00P) {-}
@@ -106,14 +114,14 @@ essential. Prior experience with the `tlverse` (as covered in the SER workshop
 ## Schedule {-}
 
 * 08:30--9:40A: Introduction to Targeted Learning by Alan (slide deck 
-  here: https://github.com/tlverse/ser2022-workshop/tree/master/slides/intro.pdf. 
+  here: https://github.com/tlverse/ser2022-workshop/tree/master/slides/intro.pdf) 
 * 09:40--10:00A: Introduction to the [`tlverse`](#tlverse) and [`R6`](#r6) by 
-  Jeremy
+  Rachael
 * 10:00--10:40A: Super learning in the `tlverse` with the [`sl3` `R`
   package](https://github.com/tlverse/sl3) by Rachael
 * 10:40--11:00A: Programming exercises with `sl3`
 * 11:00--11:40A: Targeted minimum loss-based estimation in the `tlverse` with 
-  the [`tmle3` `R` package](https://github.com/tlverse/tmle3) by Jeremy
+  the [`tmle3` `R` package](https://github.com/tlverse/tmle3) by Alan and Ivana
 * 11:40A--12:00P: Programming exercises with `tmle3`
 * 12:00--01:00P: Lunch Break
 * 01:00--02:00P: Optimal treatment regimes with the [`tmle3mopttx` `R`
@@ -127,23 +135,6 @@ NOTE: All listings are in Central Time.
 
 ## About the instructors {-}
 
-### Mark van der Laan {-}
-
-Mark van der Laan, PhD, is Professor of Biostatistics and Statistics at UC
-Berkeley. His research interests include statistical methods in computational
-biology, survival analysis, censored data, adaptive designs, targeted maximum
-likelihood estimation, causal inference, data-adaptive loss-based learning, and
-multiple testing. His research group developed loss-based super learning in
-semiparametric models, based on cross-validation, as a generic optimal tool for
-the estimation of infinite-dimensional parameters, such as nonparametric density
-estimation and prediction with both censored and uncensored data. Building on
-this work, his research group developed targeted maximum likelihood estimation
-for a target parameter of the data-generating distribution in arbitrary
-semiparametric and nonparametric models, as a generic optimal methodology for
-statistical and causal inference. Most recently, Mark's group has focused in
-part on the development of a centralized, principled set of software tools for
-targeted learning, the `tlverse`.
-
 ### Alan Hubbard {-}
 
 Alan Hubbard is Professor of Biostatistics, former head of the Division of
@@ -154,14 +145,6 @@ estimation of and inference for data-adaptive statistical target parameters, and
 targeted minimum loss-based estimation. Research in his group is generally
 motivated by applications to problems in computational biology, epidemiology,
 and precision medicine.
-
-### Jeremy Coyle {-}
-
-Jeremy Coyle, PhD, is a consulting data scientist and statistical programmer,
-currently leading the software development effort that has produced the
-`tlverse` ecosystem of R packages and related software tools. Jeremy earned his
-PhD in Biostatistics from UC Berkeley in 2016, primarily under the supervision
-of Alan Hubbard.
 
 ### Nima Hejazi {-}
 
@@ -202,7 +185,34 @@ inference, machine learning, and statistical theory to answer causal questions
 with statistical confidence. She is motivated by issues arising in healthcare, 
 and is especially interested in clinical algorithm frameworks and guidelines. 
 
-## Reproduciblity with the `tlverse` {#repro}
+### Mark van der Laan {-}
+
+Mark van der Laan, PhD, is Professor of Biostatistics and Statistics at UC
+Berkeley. His research interests include statistical methods in computational
+biology, survival analysis, censored data, adaptive designs, targeted maximum
+likelihood estimation, causal inference, data-adaptive loss-based learning, and
+multiple testing. His research group developed loss-based super learning in
+semiparametric models, based on cross-validation, as a generic optimal tool for
+the estimation of infinite-dimensional parameters, such as nonparametric density
+estimation and prediction with both censored and uncensored data. Building on
+this work, his research group developed targeted maximum likelihood estimation
+for a target parameter of the data-generating distribution in arbitrary
+semiparametric and nonparametric models, as a generic optimal methodology for
+statistical and causal inference. Most recently, Mark's group has focused in
+part on the development of a centralized, principled set of software tools for
+targeted learning, the `tlverse`. Unfortunately, Mark is not able to attend 
+SER 2022 in person. 
+
+### Jeremy Coyle {-}
+
+Jeremy Coyle, PhD, is a consulting data scientist and statistical programmer,
+currently leading the software development effort that has produced the
+`tlverse` ecosystem of `R` packages and related software tools. Jeremy earned his
+PhD in Biostatistics from UC Berkeley in 2016, primarily under the supervision
+of Alan Hubbard. Unfortunately, Jeremy is not able to attend SER 2022 in person. 
+
+
+## Reproduciblity with the `tlverse` {#repro} {-}
 
 The `tlverse` software ecosystem is a growing collection of packages, several of
 which are quite early on in the software lifecycle. The team does its best to
@@ -245,89 +255,89 @@ following packages:
 |tmle3mopttx  |1.0.0      |Github (tlverse/tmle3mopttx\@c8c675f051bc5ee6d51fa535fe6dc80791d4d1b7)  |
 |tmle3shift   |0.2.0      |Github (tlverse/tmle3shift\@4ed52b50af501a5fa2e6257b568d17fd485d3f42)   |
 
-## Setup instructions {#setup}
+## `R` and RStudio setup instructions {#setup} {-}
 
-### R and RStudio
-
-**R** and **RStudio** are separate downloads and installations. R is the
+`R` and RStudio are separate downloads and installations. `R` is the
 underlying statistical computing environment. RStudio is a graphical integrated
-development environment (IDE) that makes using R much easier and more
-interactive. You need to install R before you install RStudio.
+development environment (IDE) that makes using `R` much easier and more
+interactive. You need to install `R` before you install RStudio.
 
-#### Windows
+### Windows {-}
 
-##### If you already have R and RStudio installed
+#### If you already have `R` and RStudio installed
 
 * Open RStudio, and click on "Help" > "Check for updates". If a new version is
   available, quit RStudio, and download the latest version for RStudio.
-* To check which version of R you are using, start RStudio and the first thing
-  that appears in the console indicates the version of R you are
+* To check which version of `R` you are using, start RStudio and the first thing
+  that appears in the console indicates the version of `R` you are
   running. Alternatively, you can type `sessionInfo()`, which will also display
-  which version of R you are running. Go on the [CRAN
+  which version of `R` you are running. Go on the [CRAN
   website](https://cran.r-project.org/bin/windows/base/) and check whether a
   more recent version is available. If so, please download and install it. You
-  can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f)
+  can [check 
+  here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f)
   for more information on how to remove old versions from your system if you
   wish to do so.
 
-##### If you don't have R and RStudio installed
+#### If you don't have `R` and RStudio installed
 
-* Download R from
+* Download `R` from
   the [CRAN website](http://cran.r-project.org/bin/windows/base/release.htm).
-* Run the `.exe` file that was just downloaded
-* Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/#download)
-* Under *Installers* select **RStudio x.yy.zzz - Windows
-  XP/Vista/7/8** (where x, y, and z represent version numbers)
-* Double click the file to install it
+* Run the `.exe` file that was just downloaded.
+* Go to the [RStudio download 
+  page](https://www.rstudio.com/products/rstudio/download/#download).
+* Under *Installers* select **RStudio x.yy.zzz - Windows XP/Vista/7/8** (where 
+  x, y, and z represent version numbers).
+* Double click the file to install it.
 * Once it's installed, open RStudio to make sure it works and you don't get any
   error messages.
 
-#### macOS / Mac OS X
+### macOS / Mac OS X {-}
 
-##### If you already have R and RStudio installed
+#### If you already have `R` and RStudio installed
 
 * Open RStudio, and click on "Help" > "Check for updates". If a new version is
   available, quit RStudio, and download the latest version for RStudio.
-* To check the version of R you are using, start RStudio and the first thing
-  that appears on the terminal indicates the version of R you are running.
+* To check the version of `R` you are using, start RStudio and the first thing
+  that appears on the terminal indicates the version of `R` you are running.
   Alternatively, you can type `sessionInfo()`, which will also display which
-  version of R you are running. Go on the [CRAN
+  version of `R` you are running. Go on the [CRAN
   website](https://cran.r-project.org/bin/macosx/) and check whether a more
   recent version is available. If so, please download and install it.
 
-##### If you don't have R and RStudio installed
+#### If you don't have `R` and RStudio installed
 
-* Download R from
+* Download `R` from
   the [CRAN website](http://cran.r-project.org/bin/macosx).
-* Select the `.pkg` file for the latest R version
-* Double click on the downloaded file to install R
+* Select the `.pkg` file for the latest `R` version.
+* Double click on the downloaded file to install `R`.
 * It is also a good idea to install [XQuartz](https://www.xquartz.org/) (needed
-  by some packages)
+  by some packages).
 * Go to the [RStudio download
-  page](https://www.rstudio.com/products/rstudio/download/#download)
+  page](https://www.rstudio.com/products/rstudio/download/#download).
 * Under *Installers* select **RStudio x.yy.zzz - Mac OS X 10.6+ (64-bit)**
-  (where x, y, and z represent version numbers)
-* Double click the file to install RStudio
+  (where x, y, and z represent version numbers).
+* Double click the file to install RStudio.
 * Once it's installed, open RStudio to make sure it works and you don't get any
   error messages.
 
-#### Linux
+### Linux {-}
 
-* Follow the instructions for your distribution
-  from [CRAN](https://cloud.r-project.org/bin/linux), they provide information
-  to get the most recent version of R for common distributions. For most
-  distributions, you could use your package manager (e.g., for Debian/Ubuntu run
+* Follow the instructions for your distribution from 
+  [CRAN](https://cloud.r-project.org/bin/linux); they provide information
+  to get the most recent version of `R` for common distributions. For most
+  distributions, you could use your package manager (e.g., for Debian/Ubuntu run 
   `sudo apt-get install r-base`, and for Fedora `sudo yum install R`), but we
   don't recommend this approach as the versions provided by this are
-  usually out of date. In any case, make sure you have at least R 3.3.1.
+  usually out of date. In any case, make sure you have at least `R` 4.2.0.
 * Go to the [RStudio download
-  page](https://www.rstudio.com/products/rstudio/download/#download)
+  page](https://www.rstudio.com/products/rstudio/download/#download).
 * Under *Installers* select the version that matches your distribution, and
   install it with your preferred method (e.g., with Debian/Ubuntu `sudo dpkg -i
   rstudio-x.yy.zzz-amd64.deb` at the terminal).
 * Once it's installed, open RStudio to make sure it works and you don't get any
   error messages.
 
-These setup instructions are adapted from those written for [Data Carpentry: R
+These setup instructions are adapted from those written for [Data Carpentry: `R`
 for Data Analysis and Visualization of Ecological
 Data](http://www.datacarpentry.org/R-ecology-lesson/).

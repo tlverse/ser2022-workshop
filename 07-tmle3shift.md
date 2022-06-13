@@ -1,10 +1,10 @@
-# Stochastic Treatment Regimes (optional)
+# Stochastic Treatment Regimes
 
 _Nima Hejazi_
 
 Based on the [`tmle3shift` `R` package](https://github.com/tlverse/tmle3shift).
 
-Updated: 2022-06-08
+Updated: 2022-06-13
 
 ## Learning Objectives
 

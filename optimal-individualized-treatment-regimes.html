@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 5 Optimal Individualized Treatment Regimes | [SER 2022 Workshops] Targeted Learning I and II</title>
 <meta name="author" content="Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips">
-<meta name="description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-08  5.1 Learning Objectives By the end of this lesson you will be able...">
+<meta name="description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-13  5.1 Learning Objectives By the end of this lesson you will be able...">
 <meta name="generator" content="bookdown 0.26.3 with bs4_book()">
 <meta property="og:title" content="Chapter 5 Optimal Individualized Treatment Regimes | [SER 2022 Workshops] Targeted Learning I and II">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://tlverse.org/ser2022-workshop/optimal-individualized-treatment-regimes.html">
-<meta property="og:description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-08  5.1 Learning Objectives By the end of this lesson you will be able...">
+<meta property="og:description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-13  5.1 Learning Objectives By the end of this lesson you will be able...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 5 Optimal Individualized Treatment Regimes | [SER 2022 Workshops] Targeted Learning I and II">
-<meta name="twitter:description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-08  5.1 Learning Objectives By the end of this lesson you will be able...">
+<meta name="twitter:description" content="Ivana Malenica Based on the tmle3mopttx R package by Ivana Malenica, Jeremy Coyle, and Mark van der Laan. Updated: 2022-06-13  5.1 Learning Objectives By the end of this lesson you will be able...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -65,8 +65,8 @@
 <li><a class="" href="sl3.html"><span class="header-section-number">3</span> Super Learning with sl3</a></li>
 <li><a class="" href="tmle3.html"><span class="header-section-number">4</span> The TMLE Framework</a></li>
 <li><a class="active" href="optimal-individualized-treatment-regimes.html"><span class="header-section-number">5</span> Optimal Individualized Treatment Regimes</a></li>
-<li><a class="" href="stochastic-treatment-regimes-optional.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes (optional)</a></li>
-<li><a class="" href="causal-mediation-analysis.html"><span class="header-section-number">7</span> Causal Mediation Analysis</a></li>
+<li><a class="" href="stochastic-treatment-regimes.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes</a></li>
+<li><a class="" href="causal-mediation-analysis-optional.html"><span class="header-section-number">7</span> Causal Mediation Analysis (optional)</a></li>
 <li><a class="" href="r6.html"><span class="header-section-number">8</span> A Primer on the R6 Class System</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
@@ -83,7 +83,7 @@
 <p><em>Ivana Malenica</em></p>
 <p>Based on the <a href="https://github.com/tlverse/tmle3mopttx"><code>tmle3mopttx</code> <code>R</code> package</a>
 by <em>Ivana Malenica, Jeremy Coyle, and Mark van der Laan</em>.</p>
-<p>Updated: 2022-06-08</p>
+<p>Updated: 2022-06-13</p>
 <div id="learning-objectives-3" class="section level2">
 <h2>
 <span class="header-section-number">5.1</span> Learning Objectives<a class="anchor" aria-label="anchor" href="#learning-objectives-3"><i class="fas fa-link"></i></a>
@@ -1371,7 +1371,7 @@ and the corresponding value of the realistic ITR:</p>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="tmle3.html"><span class="header-section-number">4</span> The TMLE Framework</a></div>
-<div class="next"><a href="stochastic-treatment-regimes-optional.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes (optional)</a></div>
+<div class="next"><a href="stochastic-treatment-regimes.html"><span class="header-section-number">6</span> Stochastic Treatment Regimes</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -1423,7 +1423,7 @@ and the corresponding value of the realistic ITR:</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>[SER 2022 Workshops] Targeted Learning I and II</strong>: Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference" was written by Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips. It was last built on updated: June 08, 2022.</p>
+    <p>"<strong>[SER 2022 Workshops] Targeted Learning I and II</strong>: Causal Inference Meets Machine Learning and Advanced Applications of Causal Inference" was written by Mark van der Laan, Alan Hubbard, Jeremy Coyle, Nima Hejazi, Ivana Malenica, Rachael Phillips. It was last built on updated: June 13, 2022.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
