@@ -1,4 +1,4 @@
-# Causal Mediation Analysis
+# Causal Mediation Analysis (optional)
 
 _Nima Hejazi_
 
