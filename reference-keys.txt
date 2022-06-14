@@ -135,7 +135,7 @@ targeted-estimation-2
 exercise
 real-world-data-and-tmle3mopttx
 solutions
-stochastic-treatment-regimes-optional
+stochastic-treatment-regimes
 learning-objectives-4
 introduction-3
 stochastic-interventions
@@ -151,9 +151,9 @@ inference-with-marginal-structural-models
 directly-targeting-the-msm-parameter-beta
 example-with-the-wash-benefits-data
 exercises-1
-causal-mediation-analysis
+causal-mediation-analysis-optional
 learning-objectives-5
-causal-mediation-analysis-1
+causal-mediation-analysis
 data-structure-and-notation-1
 defining-the-natural-direct-and-indirect-effects
 decomposing-the-average-treatment-effect
