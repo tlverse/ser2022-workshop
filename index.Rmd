@@ -113,23 +113,27 @@ essential. Prior experience with the `tlverse` (as covered in the SER workshop
 
 ## Schedule {-}
 
-* 08:30--9:40A: Introduction to Targeted Learning by Alan (slide deck 
+* 08:30--9:15A: Introduction to Targeted Learning by Alan (slide deck 
   here: https://github.com/tlverse/ser2022-workshop/tree/master/slides/intro.pdf) 
-* 09:40--10:00A: Introduction to the [`tlverse`](#tlverse) and [`R6`](#r6) by 
+* 09:15--09:45A: Introduction to the [`tlverse`](#tlverse) and [WASH Benefits 
+  Bangladesh Study](https://tlverse.org/tlverse-handbook/data.html#data) by 
   Rachael
-* 10:00--10:40A: Super learning in the `tlverse` with the [`sl3` `R`
+* 09:45--10:00A: Break
+* 10:00--10:30A: Super learning in the `tlverse` with the [`sl3` `R`
   package](https://github.com/tlverse/sl3) by Rachael
-* 10:40--11:00A: Programming exercises with `sl3`
-* 11:00--11:40A: Targeted minimum loss-based estimation in the `tlverse` with 
+* 10:30--10:45A: Programming exercises with `sl3`
+* 10:45--11:15A: Targeted minimum loss-based estimation in the `tlverse` with 
   the [`tmle3` `R` package](https://github.com/tlverse/tmle3) by Alan and Ivana
-* 11:40A--12:00P: Programming exercises with `tmle3`
+* 11:15--11:30A: Programming exercises with `tmle3`
+* 11:30A--12:00P: Q&A with Mark and Alan
 * 12:00--01:00P: Lunch Break
 * 01:00--02:00P: Optimal treatment regimes with the [`tmle3mopttx` `R`
   package](https://github.com/tlverse/tmle3mopttx) by Ivana
-* 02:00-02:30P: Programming exercises with `tmle3mopttx`
-* 02:30-03:30P: Stochastic treatment regimes with the [`tmle3shift` `R`
+* 02:00-02:15P: Programming exercises with `tmle3mopttx`
+* 02:30-03:15P: Stochastic treatment regimes with the [`tmle3shift` `R`
   package](https://github.com/tlverse/tmle3shift) by Nima
-* 03:30-04:00P: Programming exercises with `tmle3shift`
+* 03:15-03:30P: Programming exercises with `tmle3shift`
+* 03:30-04:00P: Q&A with Mark and Alan
 
 NOTE: All listings are in Central Time.
 
